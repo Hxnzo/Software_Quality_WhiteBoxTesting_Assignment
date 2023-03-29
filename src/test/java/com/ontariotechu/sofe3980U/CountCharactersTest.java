@@ -1,4 +1,5 @@
 package com.ontariotechu.sofe3980U;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -17,11 +18,11 @@ public class CountCharactersTest
     @Test
     public void CountOccurrencesTest2() 
     {
-        char[] charArray = { 'a', 'b', 'c', 'd' };
+        char[] charArray = { 'a', 'd', 'b', 'c', 'd' };
         char targetChar = 'd';
         int actualCount = CountCharacters.occurences(charArray, targetChar);
         
-        assertEquals(1, actualCount);
+        assertEquals(2, actualCount);
     }
 
     @Test
@@ -67,11 +68,11 @@ public class CountCharactersTest
     @Test
     public void CountOccurrencesTest7() 
     {
-        char[] charArray = { 'a', 'b', 'c' };
+        char[] charArray = { 'd', 'a', 'd' };
         char targetChar = 'd';
         int actualCount = CountCharacters.occurences(charArray, targetChar);
         
-        assertEquals(0, actualCount);
+        assertEquals(2, actualCount);
     }
 
     @Test
@@ -87,10 +88,40 @@ public class CountCharactersTest
     @Test
     public void CountOccurrencesTest9() 
     {
-        char[] charArray = { 'a', 'b', 'd', 'c', 'd' };
+        char[] charArray = { 'd', 'd' };
         char targetChar = 'd';
         int actualCount = CountCharacters.occurences(charArray, targetChar);
         
         assertEquals(2, actualCount);
+    }
+
+    @Test
+    public void CountOccurrencesTest10() 
+    {
+        char[] charArray = { };
+        char targetChar = 'd';
+        int actualCount = CountCharacters.occurences(charArray, targetChar);
+        
+        assertEquals(0, actualCount);
+    }
+
+    @Test
+    public void CountOccurrencesTest11() 
+    {
+        char[] charArray = { 'd' };
+        char targetChar = 'd';
+        int actualCount = CountCharacters.occurences(charArray, targetChar);
+        
+        assertEquals(1, actualCount);
+    }
+
+    @Test
+    public void CountOccurrencesTest12() 
+    {
+        char[] charArray = { 'a', 'd' };
+        char targetChar = 'd';
+        int actualCount = CountCharacters.occurences(charArray, targetChar);
+        
+        assertEquals(1, actualCount);
     }
 }
